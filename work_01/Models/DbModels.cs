@@ -54,6 +54,10 @@ namespace work_01.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Candidate>().HasData(
+                new Candidate { CandidateId=1,CandidateName="emran",BirthDate= new DateTime(2002,02,02),Email="em@gmail.com",Picture="abc.jpg",Fresher=true,Password="abc123"}
+
+                );
             modelBuilder.Entity<Skill>().HasData
             (
                 new Skill { SkillId = 1, SkillName = "C#" },
